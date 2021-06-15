@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Game>
+
+@* bu sayfa game tipinde bir liste gösterebiliyor*@
+<div>
+    <h1> Oyunlarr</h1>
+    <hr/>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>List Price</th>
+            </tr>
+        </thead>
+        @foreach (var g in Model)
+            {
+                <tr>
+                    <td>@g.Id</td>
+                    <td>@g.Name <b>(@g.ListPrice)</b></td>
+                </tr>
+            }
+    </table>
+</div>
